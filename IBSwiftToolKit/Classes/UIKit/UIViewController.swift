@@ -31,7 +31,7 @@ extension UIViewController {
         return []
     }
     
-    public func presentErrorViewController(error: NSError?, title: String = "Error", okButton: String = "OK",  unknownErrorDescription unknown: String = "Unknown error", animated: Bool = true, completion: (()-> Void)? = nil) {
+    public func presentErrorViewController(error: NSError?, title: String = "Error", okButton: String = "OK", animated: Bool = true, completion: (()-> Void)? = nil) {
         
         if NSThread.mainThread() != NSThread.currentThread() {
             dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
@@ -39,37 +39,7 @@ extension UIViewController {
                 })
         }
         
-        let desc: String
-        let options: String!
-        let reason: String!
-        let suggestions: String!
-        
-        if let error = error {
-            
-            
-            desc = error.userInfo[NSLocalizedDescriptionKey] as? String ?? unknown
-            options = (error.userInfo[NSLocalizedRecoveryOptionsErrorKey] as? Array<String>)?.joinWithSeparator(", ")
-            reason = error.userInfo[NSLocalizedFailureReasonErrorKey] as? String
-            suggestions = error.userInfo[NSLocalizedRecoverySuggestionErrorKey] as? String
-        } else {
-            desc = unknown
-            options = nil
-            reason = nil
-            suggestions = nil
-        }
-        
-        var message = desc
-        if reason != nil {
-            message += "\n\(reason)"
-        }
-        if suggestions != nil {
-            message += "\n\(suggestions)"
-        }
-        if options != nil {
-            message += "\n\(options)"
-        }
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alert = UIAlertController(title: title, error: error)
         alert.addAction(UIAlertAction(title: okButton, style: .Cancel, handler: nil))
         
         presentViewController(alert, animated: animated, completion: completion)
