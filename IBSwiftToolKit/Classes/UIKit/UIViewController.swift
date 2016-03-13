@@ -9,13 +9,12 @@
 import UIKit
 
 
-extension UIViewController {
-    
-    public struct StoryboardSegueTemplate {
-        public var segueClassName: String
-        public var destinationViewControllerIdentifier: String
-    }
+public struct StoryboardSegueTemplate {
+    public var segueClassName: String
+    public var destinationViewControllerIdentifier: String
+}
 
+extension UIViewController {
     
     public func findOutputSeguesWithClassNameContains(className: String) -> [StoryboardSegueTemplate] {
         if let segues = self.valueForKey("_storyboardSegueTemplates") as? [AnyObject] {
