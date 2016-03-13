@@ -8,12 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		9F978DBB1C95C81E0056A87C /* IBSwiftToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DC41C95C8660056A87C /* UIViewController.swift */; };
+		9F978DC71C95C9A50056A87C /* UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DC61C95C9A50056A87C /* UIAlertViewController.swift */; };
+		9F978DCA1C95C9D80056A87C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DC91C95C9D80056A87C /* UIButton.swift */; };
+		9F978DCD1C95CA490056A87C /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DCC1C95CA490056A87C /* CGRect.swift */; };
+		9F978DCF1C95CA860056A87C /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DCE1C95CA860056A87C /* CGPoint.swift */; };
+		9F978DD21C95CAB00056A87C /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DD11C95CAB00056A87C /* CGImage.swift */; };
+		9F978DD51C95CAFE0056A87C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DD41C95CAFE0056A87C /* Array.swift */; };
+		9F978DD91C95CB510056A87C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DD81C95CB510056A87C /* UIView.swift */; };
+		9F978DDC1C95CB760056A87C /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DDB1C95CB760056A87C /* CGColor.swift */; };
+		9F978DDF1C95CC060056A87C /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DDE1C95CC060056A87C /* NSRange.swift */; };
+		9F978DE11C95CC200056A87C /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE01C95CC200056A87C /* NSObject.swift */; };
+		9F978DE31C95CF1D0056A87C /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE21C95CF1D0056A87C /* CGAffineTransform.swift */; };
+		9F978DE71C95CF670056A87C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE61C95CF670056A87C /* String.swift */; };
+		9F978DE91C95DBE20056A87C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE81C95DBE20056A87C /* NSAttributedString.swift */; };
+		9F978DEB1C95DC5F0056A87C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEA1C95DC5F0056A87C /* Int.swift */; };
+		9F978DED1C95DD360056A87C /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEC1C95DD360056A87C /* UIDevice.swift */; };
+		9F978DF01C95DD830056A87C /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEF1C95DD830056A87C /* Init.swift */; };
+		9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF21C95DE230056A87C /* UISearchBar.swift */; };
+		9F978DF51C95DE410056A87C /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */; };
+		9F978DF71C95DE8F0056A87C /* UISegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */; };
+		9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F978DB71C95C81E0056A87C /* IBSwiftToolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IBSwiftToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBSwiftToolKit.h; sourceTree = "<group>"; };
 		9F978DBC1C95C81E0056A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F978DC41C95C8660056A87C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9F978DC61C95C9A50056A87C /* UIAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertViewController.swift; sourceTree = "<group>"; };
+		9F978DC91C95C9D80056A87C /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9F978DCC1C95CA490056A87C /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		9F978DCE1C95CA860056A87C /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		9F978DD11C95CAB00056A87C /* CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
+		9F978DD41C95CAFE0056A87C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		9F978DD81C95CB510056A87C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9F978DDB1C95CB760056A87C /* CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
+		9F978DDE1C95CC060056A87C /* NSRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRange.swift; sourceTree = "<group>"; };
+		9F978DE01C95CC200056A87C /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		9F978DE21C95CF1D0056A87C /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
+		9F978DE61C95CF670056A87C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9F978DE81C95DBE20056A87C /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		9F978DEA1C95DC5F0056A87C /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		9F978DEC1C95DD360056A87C /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		9F978DEF1C95DD830056A87C /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
+		9F978DF21C95DE230056A87C /* UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentControl.swift; sourceTree = "<group>"; };
+		9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +88,79 @@
 		9F978DB91C95C81E0056A87C /* IBSwiftToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				9F978DC21C95C83F0056A87C /* Classes */,
 				9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */,
 				9F978DBC1C95C81E0056A87C /* Info.plist */,
 			);
 			path = IBSwiftToolKit;
+			sourceTree = "<group>";
+		};
+		9F978DC21C95C83F0056A87C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DEE1C95DD6F0056A87C /* Functions */,
+				9F978DDD1C95CBE90056A87C /* Foundation */,
+				9F978DD31C95CAEF0056A87C /* Swift */,
+				9F978DCB1C95CA2D0056A87C /* CoreGraphics */,
+				9F978DC31C95C84C0056A87C /* UIKit */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9F978DC31C95C84C0056A87C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DC41C95C8660056A87C /* UIViewController.swift */,
+				9F978DD81C95CB510056A87C /* UIView.swift */,
+				9F978DC91C95C9D80056A87C /* UIButton.swift */,
+				9F978DC61C95C9A50056A87C /* UIAlertViewController.swift */,
+				9F978DEC1C95DD360056A87C /* UIDevice.swift */,
+				9F978DF21C95DE230056A87C /* UISearchBar.swift */,
+				9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */,
+				9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9F978DCB1C95CA2D0056A87C /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DCC1C95CA490056A87C /* CGRect.swift */,
+				9F978DCE1C95CA860056A87C /* CGPoint.swift */,
+				9F978DD11C95CAB00056A87C /* CGImage.swift */,
+				9F978DDB1C95CB760056A87C /* CGColor.swift */,
+				9F978DE21C95CF1D0056A87C /* CGAffineTransform.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		9F978DD31C95CAEF0056A87C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DD41C95CAFE0056A87C /* Array.swift */,
+				9F978DE61C95CF670056A87C /* String.swift */,
+				9F978DEA1C95DC5F0056A87C /* Int.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		9F978DDD1C95CBE90056A87C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DE01C95CC200056A87C /* NSObject.swift */,
+				9F978DDE1C95CC060056A87C /* NSRange.swift */,
+				9F978DE81C95DBE20056A87C /* NSAttributedString.swift */,
+				9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		9F978DEE1C95DD6F0056A87C /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				9F978DEF1C95DD830056A87C /* Init.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +241,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F978DD91C95CB510056A87C /* UIView.swift in Sources */,
+				9F978DF01C95DD830056A87C /* Init.swift in Sources */,
+				9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */,
+				9F978DE71C95CF670056A87C /* String.swift in Sources */,
+				9F978DE11C95CC200056A87C /* NSObject.swift in Sources */,
+				9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */,
+				9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */,
+				9F978DDF1C95CC060056A87C /* NSRange.swift in Sources */,
+				9F978DC71C95C9A50056A87C /* UIAlertViewController.swift in Sources */,
+				9F978DDC1C95CB760056A87C /* CGColor.swift in Sources */,
+				9F978DED1C95DD360056A87C /* UIDevice.swift in Sources */,
+				9F978DF51C95DE410056A87C /* UIBarButtonItem.swift in Sources */,
+				9F978DE91C95DBE20056A87C /* NSAttributedString.swift in Sources */,
+				9F978DD51C95CAFE0056A87C /* Array.swift in Sources */,
+				9F978DCA1C95C9D80056A87C /* UIButton.swift in Sources */,
+				9F978DD21C95CAB00056A87C /* CGImage.swift in Sources */,
+				9F978DE31C95CF1D0056A87C /* CGAffineTransform.swift in Sources */,
+				9F978DEB1C95DC5F0056A87C /* Int.swift in Sources */,
+				9F978DCF1C95CA860056A87C /* CGPoint.swift in Sources */,
+				9F978DCD1C95CA490056A87C /* CGRect.swift in Sources */,
+				9F978DF71C95DE8F0056A87C /* UISegmentControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,28 +362,33 @@
 		9F978DC01C95C81E0056A87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBSwiftToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.IBSwiftToolKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9F978DC11C95C81E0056A87C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBSwiftToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.IBSwiftToolKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
