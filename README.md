@@ -1,5 +1,10 @@
 IBSwiftToolKit contains a lot useful extensions.
 
+You can use CocoaPods to integrate library with your project:
+```
+ pod 'IBSwiftToolKit', :git => 'https://github.com/ivabra/IBSwiftToolKit'
+```
+
 **Foundation**
 - NSAttributedString
 - NSDateFormatter
