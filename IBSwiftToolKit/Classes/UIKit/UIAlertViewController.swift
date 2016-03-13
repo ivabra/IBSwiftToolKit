@@ -19,4 +19,35 @@ extension UIAlertController {
         
         controller.presentViewController(alert, animated: true, completion: nil)
     }
+    public convenience init(title: String, error: NSError?, unknownErrorDescription unknown: String = "Unknown error") {
+        let desc: String
+        let options: String!
+        let reason: String!
+        let suggestions: String!
+        
+        if let error = error { 
+            desc = error.userInfo[NSLocalizedDescriptionKey] as? String ?? unknown
+            options = (error.userInfo[NSLocalizedRecoveryOptionsErrorKey] as? Array<String>)?.joinWithSeparator(", ")
+            reason = error.userInfo[NSLocalizedFailureReasonErrorKey] as? String
+            suggestions = error.userInfo[NSLocalizedRecoverySuggestionErrorKey] as? String
+        } else {
+            desc = unknown
+            options = nil
+            reason = nil
+            suggestions = nil
+        }
+        
+        var message = desc
+        if reason != nil {
+            message += "\n\(reason)"
+        }
+        if suggestions != nil {
+            message += "\n\(suggestions)"
+        }
+        if options != nil {
+            message += "\n\(options)"
+        }
+        
+        self.init(title: title, message: message, preferredStyle: .Alert)
+    }
 }
