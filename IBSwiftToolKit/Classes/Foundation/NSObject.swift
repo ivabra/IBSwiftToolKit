@@ -9,13 +9,17 @@
 import Foundation.NSObject
 
 extension NSObject {
+    
     public func asOption<T>(type: T.Type) -> T? {
         return self as? T
     }
+    
     public func asUnwrappedOption<T>(type: T.Type) -> T! {
         return self as? T
     }
+    
     public func asType<T>(type: T.Type) -> T {
         return self as! T
     }
+    
 }

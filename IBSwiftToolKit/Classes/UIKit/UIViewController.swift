@@ -12,8 +12,8 @@ import UIKit
 extension UIViewController {
     
     public struct StoryboardSegueTemplate {
-        var segueClassName: String
-        var destinationViewControllerIdentifier: String
+        public var segueClassName: String
+        public var destinationViewControllerIdentifier: String
     }
 
     

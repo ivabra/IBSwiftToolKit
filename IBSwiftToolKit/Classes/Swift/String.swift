@@ -13,14 +13,9 @@ extension String {
         return UIImage(named: self)
     }
     
-    
-    
-    
     public func createViewController<T: UIViewController>(storyboard: UIStoryboard, _ type: T.Type) -> T? {
         return storyboard.instantiateViewControllerWithIdentifier(self) as? T
     }
-    
-    
     
     
     public func like(regex: String) -> Bool {
@@ -98,13 +93,13 @@ extension String {
     
     
     
-    public func stringByappendingParameter(parameter: String, withValue value: String) -> String {
+    public func stringByappendingURLParameter(parameter: String, withValue value: String) -> String {
         return self + (hasCharacter("?") ? "&" : "?") + "\(parameter)=\(value)"
     }
     
     
     
-    public func stringByAppendingParameters(paramValueDictionary: [String : AnyObject])-> String{
+    public func stringByAppendingURLParameters(paramValueDictionary: [String : AnyObject])-> String{
         var arr = [String]()
         for i in paramValueDictionary {
             arr.append("\(i.0)=\(i.1)")
@@ -115,6 +110,7 @@ extension String {
         if  !hasCharacter("?") {
             input += "?" + arr.removeAtIndex(0)
         }
+        
         return arr.reduce(input, combine: {$0 + "&" + $1})
     }
     
@@ -141,6 +137,7 @@ extension String {
     }
     
     
+    
     public func NSRangeOfString(string: String) -> NSRange? {
         if let range = rangeOfString(string, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil) {
             return NSMakeRange(self.startIndex.distanceTo(range.startIndex), range.count)
@@ -149,22 +146,24 @@ extension String {
         }
     }
     
-    public func clearURLString() -> String {
+    
+    
+    public var clearedURLString: String {
         return stringByReplacingOccurrencesOfString("/", withString: "_").stringByReplacingOccurrencesOfString(":", withString: "_").stringByReplacingOccurrencesOfString(".", withString: "_")
     }
     
     // MARK: Localization
     
     
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self, comment: "")
     }
     
-    func localized(comment comment: String) -> String {
+    public func localized(comment comment: String) -> String {
         return NSLocalizedString(self, comment: comment)
     }
     
-    func localizedFormat(arguments: CVarArgType...) -> String {
+    public func localizedFormat(arguments: CVarArgType...) -> String {
         return String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
     }
     

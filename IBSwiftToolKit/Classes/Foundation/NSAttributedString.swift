@@ -9,7 +9,8 @@
 import Foundation
 
 extension NSAttributedString {
-    convenience init(attributeStrings: AnyObject...) {
+    
+    public convenience init(attributeStrings: AnyObject...) {
         let str = NSMutableAttributedString()
         for s in attributeStrings {
             if let attrString = s as? NSAttributedString {
@@ -22,4 +23,6 @@ extension NSAttributedString {
         }
         self.init(attributedString: str)
     }
+    
 }
+

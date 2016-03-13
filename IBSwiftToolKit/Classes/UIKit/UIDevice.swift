@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIDevice {
-    var userInfo: [String : AnyObject]{
+    public var userInfo: [String : AnyObject]{
         return [
             "name"          : name,
             "sysname"       : systemName,

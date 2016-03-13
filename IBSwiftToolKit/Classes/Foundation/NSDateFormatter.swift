@@ -9,8 +9,10 @@
 import Foundation
 
 extension NSDateFormatter {
+    
     public convenience init(format: String){
         self.init()
         self.dateFormat = format
     }
+    
 }
