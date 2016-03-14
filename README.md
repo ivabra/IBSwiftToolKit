@@ -55,10 +55,10 @@ public func arrayWithItemsAtIndexes(indexes: [Int]) -> [Element]
 ```
 - Int  
 ```swift
-    public var Double: Double { get }
-    public var kilobytes: Double { get }
-    public var megabytes: Double { get }
-    public var gigabytes: Double { get }
+public var Double: Double { get }
+public var kilobytes: Double { get }
+public var megabytes: Double { get }
+public var gigabytes: Double { get }
 ```
 - String  
 ```swift
