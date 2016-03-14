@@ -13,8 +13,10 @@ var view = Init(UIView) {[unowned self] in
 }
 ```
 **Operators**
-- `=!` - unsafe type casting operator. Instead `var a: T = b as! T` you can use `var a: T =! b` 
-- `=!` - safe type casting operator. Instead `var a: T = b as? T` you can use `var a: T =? b` 
+- `=!` - unsafe type casting operator. Instead `var a: T = b as! T` you can use `var a: T =! b`.
+- `=!` - safe type casting operator.   
+Instead `var a: T = b as? T` you can use `var a: T =? b`.
+
 **Foundation**
 - NSAttributedString
 - NSDateFormatter
