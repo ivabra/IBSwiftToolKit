@@ -29,6 +29,7 @@
 		9F978DF51C95DE410056A87C /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */; };
 		9F978DF71C95DE8F0056A87C /* UISegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */; };
 		9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */; };
+		9F978E0F1C96CA0E0056A87C /* CommonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentControl.swift; sourceTree = "<group>"; };
 		9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateFormatter.swift; sourceTree = "<group>"; };
+		9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonOperators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		9F978DC21C95C83F0056A87C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F978E0D1C96C9E90056A87C /* Operators */,
 				9F978DEE1C95DD6F0056A87C /* Functions */,
 				9F978DDD1C95CBE90056A87C /* Foundation */,
 				9F978DD31C95CAEF0056A87C /* Swift */,
@@ -161,6 +164,14 @@
 				9F978DEF1C95DD830056A87C /* Init.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		9F978E0D1C96C9E90056A87C /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */,
+			);
+			path = Operators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */,
 				9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */,
 				9F978DDF1C95CC060056A87C /* NSRange.swift in Sources */,
+				9F978E0F1C96CA0E0056A87C /* CommonOperators.swift in Sources */,
 				9F978DC71C95C9A50056A87C /* UIAlertViewController.swift in Sources */,
 				9F978DDC1C95CB760056A87C /* CGColor.swift in Sources */,
 				9F978DED1C95DD360056A87C /* UIDevice.swift in Sources */,
