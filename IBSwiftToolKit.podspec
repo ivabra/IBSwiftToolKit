@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "IBSwiftToolKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Here is my own toolbox written on Swift"
 
   # This description is used to generate tags and improve search results.
@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ivabra/IBSwiftToolKit.git", :tag=> "0.0.4" }
+  s.source       = { :git => "https://github.com/ivabra/IBSwiftToolKit.git", :tag=> "0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

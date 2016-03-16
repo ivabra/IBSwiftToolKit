@@ -8,7 +8,7 @@ You can use CocoaPods to integrate library with your project:
 - `Init(object, setup)` - initializer pattern.
 ```swift
 var view = Init(UIView) {[unowned self] in
-	$0.backgroundColor = UIColor.whiteColor;
+	$0.backgroundColor = UIColor.whiteColor();
 	self.view.addSubview($0)
 }
 ```
@@ -238,4 +238,6 @@ public func addChildViewController(controller: UIViewController, toView view: UI
 public func removeFromParentViewControllerCompletely()
 
 @IBInspectable public var localizeableTitle: String? { get set }
+
+public func parentViewControllerWithClass<T : UIViewController>(class: T.Type) -> T?
 ```
