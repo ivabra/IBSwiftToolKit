@@ -16,6 +16,7 @@ public struct StoryboardSegueTemplate {
 
 extension UIViewController {
     
+    
     public func findOutputSeguesWithClassNameContains(className: String) -> [StoryboardSegueTemplate] {
         if let segues = self.valueForKey("_storyboardSegueTemplates") as? [AnyObject] {
             let templates = segues
@@ -59,7 +60,6 @@ extension UIViewController {
     }
     
     @IBInspectable
-    
     public var localizeableTitle: String? {
         get {
             return title
@@ -67,6 +67,23 @@ extension UIViewController {
         set {
             self.title = newValue?.localized
         }
+    }
+    
+    
+    
+    /// Find the nearest parent view Ccontroller with specified `class`.
+    ///- Parameter class: Class of desired parent view controller.
+    ///- Returns: Nearest parent view controller with specified `class`, or `nil`.
+    
+    public func parentViewControllerWithClass<T: UIViewController>(`class`: T.Type) -> T? {
+        var currentViewController = self
+        while let parent = currentViewController.parentViewController {
+            if parent is T {
+                return parent as? T
+            }
+            currentViewController = parent
+        }
+        return nil
     }
     
 }
