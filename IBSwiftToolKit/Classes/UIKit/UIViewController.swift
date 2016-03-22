@@ -32,12 +32,12 @@ extension UIViewController {
         return []
     }
     
-    public func presentErrorViewController(error: NSError?, title: String = "Error", okButton: String = "OK", animated: Bool = true, completion: (()-> Void)? = nil) {
+    public func presentErrorViewController(error: NSError?, title: String = IBSwiftToolKit.UIAlertViewController.errorTitle, okButton: String = "OK", animated: Bool = true, completion: (()-> Void)? = nil) {
         
         if NSThread.mainThread() != NSThread.currentThread() {
             dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
                 self?.presentErrorViewController(error, animated: animated, completion: completion)
-                })
+             })
         }
         
         let alert = UIAlertController(title: title, error: error)

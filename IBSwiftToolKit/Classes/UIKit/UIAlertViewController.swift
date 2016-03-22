@@ -19,7 +19,7 @@ extension UIAlertController {
         
         controller.presentViewController(alert, animated: true, completion: nil)
     }
-    public convenience init(title: String, error: NSError?, unknownErrorDescription unknown: String = "Unknown error") {
+    public convenience init(title: String, error: NSError?, unknownErrorDescription unknown: String = IBSwiftToolKit.UIAlertViewController.DefaultErrorDescription) {
         let desc: String
         let options: String!
         let reason: String!

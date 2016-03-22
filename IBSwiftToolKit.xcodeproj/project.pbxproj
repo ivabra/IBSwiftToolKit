@@ -31,6 +31,7 @@
 		9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */; };
 		9F978E0F1C96CA0E0056A87C /* CommonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */; };
 		9FAFE99D1CA1E73800FDDE91 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */; };
+		9FAFE9A01CA1F87B00FDDE91 /* IBSwiftToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateFormatter.swift; sourceTree = "<group>"; };
 		9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonOperators.swift; sourceTree = "<group>"; };
 		9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBSwiftToolKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				9F978DC21C95C83F0056A87C /* Classes */,
 				9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */,
+				9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */,
 				9F978DBC1C95C81E0056A87C /* Info.plist */,
 			);
 			path = IBSwiftToolKit;
@@ -260,6 +263,7 @@
 				9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */,
 				9F978DE71C95CF670056A87C /* String.swift in Sources */,
 				9F978DE11C95CC200056A87C /* NSObject.swift in Sources */,
+				9FAFE9A01CA1F87B00FDDE91 /* IBSwiftToolKit.swift in Sources */,
 				9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */,
 				9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */,
 				9F978DDF1C95CC060056A87C /* NSRange.swift in Sources */,
