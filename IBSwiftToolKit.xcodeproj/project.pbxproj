@@ -96,7 +96,6 @@
 			children = (
 				9F978DC21C95C83F0056A87C /* Classes */,
 				9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */,
-				9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */,
 				9F978DBC1C95C81E0056A87C /* Info.plist */,
 			);
 			path = IBSwiftToolKit;
@@ -105,6 +104,7 @@
 		9F978DC21C95C83F0056A87C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */,
 				9F978E0D1C96C9E90056A87C /* Operators */,
 				9F978DEE1C95DD6F0056A87C /* Functions */,
 				9F978DDD1C95CBE90056A87C /* Foundation */,
