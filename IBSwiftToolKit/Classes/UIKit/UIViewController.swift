@@ -75,7 +75,7 @@ extension UIViewController {
     ///- Parameter class: Class of desired parent view controller.
     ///- Returns: Nearest parent view controller with specified `class`, or `nil`.
     
-    public func parentViewControllerWithClass<T>(`class`: T.Type) -> T? {
+    public func parentViewControllerWithType<T>(`class`: T.Type) -> T? {
         var currentViewController = self
         while let parent = currentViewController.parentViewController {
             if parent is T {

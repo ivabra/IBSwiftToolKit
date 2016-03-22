@@ -241,3 +241,7 @@ public func removeFromParentViewControllerCompletely()
 
 public func parentViewControllerWithClass<T : UIViewController>(class: T.Type) -> T?
 ```
+- UIResponsder 
+```swift
+ public class func currentFirstResponder() -> UIResponder?
+```
