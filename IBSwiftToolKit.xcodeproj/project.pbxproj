@@ -30,6 +30,7 @@
 		9F978DF71C95DE8F0056A87C /* UISegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */; };
 		9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */; };
 		9F978E0F1C96CA0E0056A87C /* CommonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */; };
+		9FAFE99D1CA1E73800FDDE91 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentControl.swift; sourceTree = "<group>"; };
 		9F978DF81C95DEC40056A87C /* NSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateFormatter.swift; sourceTree = "<group>"; };
 		9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonOperators.swift; sourceTree = "<group>"; };
+		9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				9F978DF21C95DE230056A87C /* UISearchBar.swift */,
 				9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */,
 				9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */,
+				9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				9F978DC71C95C9A50056A87C /* UIAlertViewController.swift in Sources */,
 				9F978DDC1C95CB760056A87C /* CGColor.swift in Sources */,
 				9F978DED1C95DD360056A87C /* UIDevice.swift in Sources */,
+				9FAFE99D1CA1E73800FDDE91 /* UIResponder.swift in Sources */,
 				9F978DF51C95DE410056A87C /* UIBarButtonItem.swift in Sources */,
 				9F978DE91C95DBE20056A87C /* NSAttributedString.swift in Sources */,
 				9F978DD51C95CAFE0056A87C /* Array.swift in Sources */,
