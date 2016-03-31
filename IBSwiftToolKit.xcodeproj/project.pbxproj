@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F870EBE1CAD5F61004F92A4 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F870EBD1CAD5F61004F92A4 /* UILabel.swift */; };
 		9F978DBB1C95C81E0056A87C /* IBSwiftToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DC41C95C8660056A87C /* UIViewController.swift */; };
 		9F978DC71C95C9A50056A87C /* UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DC61C95C9A50056A87C /* UIAlertViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F870EBD1CAD5F61004F92A4 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		9F978DB71C95C81E0056A87C /* IBSwiftToolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IBSwiftToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F978DBA1C95C81E0056A87C /* IBSwiftToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBSwiftToolKit.h; sourceTree = "<group>"; };
 		9F978DBC1C95C81E0056A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9F978DF41C95DE410056A87C /* UIBarButtonItem.swift */,
 				9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */,
 				9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */,
+				9F870EBD1CAD5F61004F92A4 /* UILabel.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */,
 				9F978DE71C95CF670056A87C /* String.swift in Sources */,
 				9F978DE11C95CC200056A87C /* NSObject.swift in Sources */,
+				9F870EBE1CAD5F61004F92A4 /* UILabel.swift in Sources */,
 				9FAFE9A01CA1F87B00FDDE91 /* IBSwiftToolKit.swift in Sources */,
 				9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */,
 				9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */,
@@ -326,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -369,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,7 +393,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBSwiftToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.IBSwiftToolKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,7 +412,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBSwiftToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.IBSwiftToolKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

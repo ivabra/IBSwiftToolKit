@@ -62,4 +62,34 @@ extension UIButton {
         }
     }
     
+    @IBInspectable
+    public var localizeableDisabledTitle: String? {
+        get {
+            return nil
+        }
+        set {
+            self.setTitle(newValue?.localized, forState: .Disabled)
+        }
+    }
+    
+    @IBInspectable
+    public var localizeableSelectedTitle: String? {
+        get {
+            return nil
+        }
+        set {
+            self.setTitle(newValue?.localized, forState: .Selected)
+        }
+    }
+    
+    @IBInspectable
+    public var localizeableHighlightedTitle: String? {
+        get {
+            return nil
+        }
+        set {
+            self.setTitle(newValue?.localized, forState: .Highlighted)
+        }
+    }
+    
 }
