@@ -33,6 +33,7 @@
 		9F978E0F1C96CA0E0056A87C /* CommonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */; };
 		9FAFE99D1CA1E73800FDDE91 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */; };
 		9FAFE9A01CA1F87B00FDDE91 /* IBSwiftToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */; };
+		9FF4973C1CAFDF78009C244D /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4973B1CAFDF78009C244D /* UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9F978E0E1C96CA0E0056A87C /* CommonOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonOperators.swift; sourceTree = "<group>"; };
 		9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		9FAFE99F1CA1F87B00FDDE91 /* IBSwiftToolKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBSwiftToolKit.swift; sourceTree = "<group>"; };
+		9FF4973B1CAFDF78009C244D /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				9F978DF61C95DE8F0056A87C /* UISegmentControl.swift */,
 				9FAFE99C1CA1E73800FDDE91 /* UIResponder.swift */,
 				9F870EBD1CAD5F61004F92A4 /* UILabel.swift */,
+				9FF4973B1CAFDF78009C244D /* UITextField.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				9F978DF91C95DEC40056A87C /* NSDateFormatter.swift in Sources */,
 				9F978DE71C95CF670056A87C /* String.swift in Sources */,
 				9F978DE11C95CC200056A87C /* NSObject.swift in Sources */,
+				9FF4973C1CAFDF78009C244D /* UITextField.swift in Sources */,
 				9F870EBE1CAD5F61004F92A4 /* UILabel.swift in Sources */,
 				9FAFE9A01CA1F87B00FDDE91 /* IBSwiftToolKit.swift in Sources */,
 				9F978DC51C95C8660056A87C /* UIViewController.swift in Sources */,
