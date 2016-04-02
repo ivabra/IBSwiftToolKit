@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IBSwiftToolKit"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "Here is my own toolbox written on Swift"
 
   s.description  = <<-DESC 
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   # s.tvos.deployment_target = "9.0"
 
 
-  s.source       = { :git => "https://github.com/ivabra/IBSwiftToolKit.git", :tag => "master" }
+  s.source       = { :git => "https://github.com/ivabra/IBSwiftToolKit.git", :tag => "v#{s.version}" }
 
   s.source_files  = "IBSwiftToolKit/Classes", "IBSwiftToolKit/Classes/**/*.{h,m,swift}"
   s.exclude_files = "IBSwiftToolKit/Classes/Exclude"
