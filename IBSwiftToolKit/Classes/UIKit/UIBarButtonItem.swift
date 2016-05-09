@@ -10,7 +10,7 @@ import Foundation
 
 extension UIBarButtonItem {
     @IBInspectable
-    public var localizeableTitle: String? {
+    public var localizableTitle: String? {
         get {
             return nil
         }
