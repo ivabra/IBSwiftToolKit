@@ -53,7 +53,7 @@ extension UIButton {
     // MARK: Localization
     
     @IBInspectable
-    public var localizeableNormalTitle: String? {
+    public var localizableNormalTitle: String? {
         get {
             return nil
         }
@@ -63,7 +63,7 @@ extension UIButton {
     }
     
     @IBInspectable
-    public var localizeableDisabledTitle: String? {
+    public var localizableDisabledTitle: String? {
         get {
             return nil
         }
@@ -73,7 +73,7 @@ extension UIButton {
     }
     
     @IBInspectable
-    public var localizeableSelectedTitle: String? {
+    public var localizableSelectedTitle: String? {
         get {
             return nil
         }
@@ -83,7 +83,7 @@ extension UIButton {
     }
     
     @IBInspectable
-    public var localizeableHighlightedTitle: String? {
+    public var localizableHighlightedTitle: String? {
         get {
             return nil
         }

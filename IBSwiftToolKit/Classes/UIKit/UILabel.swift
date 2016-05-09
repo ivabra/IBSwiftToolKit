@@ -10,7 +10,7 @@ import UIKit.UILabel
 
 extension UILabel {
     
-    @IBInspectable var localizeableText: String? {
+    @IBInspectable var localizableText: String? {
         set {
             self.text = newValue?.localized
         }

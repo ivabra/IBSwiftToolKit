@@ -10,7 +10,7 @@ import Foundation
 
 extension UISearchBar {
     @IBInspectable
-    public var localizeablePlaceholder: String? {
+    public var localizablePlaceholder: String? {
         get {
             return nil
         }
