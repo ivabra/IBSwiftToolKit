@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func Init<T>(object: T!, @noescape _ setup: T->Void) -> T! {
+public func Init<T>(_ object: T!, _ setup: (T)->Void) -> T! {
     guard let object = object else  { return nil }
     setup(object)
     return object

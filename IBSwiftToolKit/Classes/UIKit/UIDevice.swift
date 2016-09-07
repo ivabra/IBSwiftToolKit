@@ -9,13 +9,15 @@
 import Foundation
 
 extension UIDevice {
-    public var userInfo: [String : AnyObject]{
+    /*
+    public var userInfo: [String : String]{
         return [
             "name"          : name,
             "sysname"       : systemName,
-            "model"         : model,
-            "systemVersion" : systemVersion,
-            "uiIdiom"       : userInterfaceIdiom == .Pad ? "iPad" : "iPhone"
+            "model"         : model as AnyObject,
+            "systemVersion" : systemVersion as AnyObject,
+            "uiIdiom"       : userInterfaceIdiom == .pad ? "iPad" : "iPhone"
         ]
     }
+  */
 }

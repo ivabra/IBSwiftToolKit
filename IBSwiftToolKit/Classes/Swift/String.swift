@@ -13,36 +13,37 @@ extension String {
         return UIImage(named: self)
     }
     
-    public func createViewController<T: UIViewController>(storyboard: UIStoryboard, _ type: T.Type) -> T? {
-        return storyboard.instantiateViewControllerWithIdentifier(self) as? T
+    /*
+    public func createViewController<T: UIViewController>(_ storyboard: UIStoryboard, _ type: T.Type) -> T? {
+        return storyboard.instantiateViewController(withIdentifier: self) as? T
     }
     
     
-    public func like(regex: String) -> Bool {
-        if let regexp = try? NSRegularExpression(pattern: regex, options: .CaseInsensitive) {
-            return regexp.firstMatchInString(self, options: [], range: NSMakeRange(0, self.characters.count)) != nil
+    public func like(_ regex: String) -> Bool {
+        if let regexp = try? NSRegularExpression(pattern: regex, options: .caseInsensitive) {
+            return regexp.firstMatch(in: self, options: [], range: NSMakeRange(0, self.characters.count)) != nil
         }
         return false
     }
     
     
-    public func firstMatchingRegexpPattern(pattern: String) -> String? {
-        if let expr = try? NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions.CaseInsensitive),
-            first = expr.firstMatchInString(self, options: NSMatchingOptions(), range: NSMakeRange(0, self.characters.count))
+    public func firstMatchingRegexpPattern(_ pattern: String) -> String? {
+        if let expr = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive),
+            let first = expr.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, self.characters.count))
         {
             let r = first.range
-            let range = startIndex.advancedBy(r.location)...startIndex.advancedBy(r.location + r.length)
-            return substringWithRange(range)
+            let range = characters.index(startIndex, offsetBy: r.location)...characters.index(startIndex, offsetBy: r.location + r.length)
+            return substring(with: range)
         } else {
             return nil
         }
     }
     
+    */
     
-    
-    public func allCharactersInSet(set: NSCharacterSet) -> Bool {
+    public func allCharactersInSet(_ set: CharacterSet) -> Bool {
         for ch in self.utf16 {
-            if !set.characterIsMember(ch){ return false }
+            if !set.contains(UnicodeScalar(ch)!){ return false }
         }
         return true
     }
@@ -50,9 +51,9 @@ extension String {
     
     
     
-    public func oneOrMoreCharactersInSet(set: NSCharacterSet) -> Bool {
+    public func oneOrMoreCharactersInSet(_ set: CharacterSet) -> Bool {
         for ch in self.utf16 {
-            if set.characterIsMember(ch){ return true }
+            if set.contains(UnicodeScalar(ch)!){ return true }
         }
         return false
     }
@@ -60,21 +61,21 @@ extension String {
     
     
     
-    public func attributed(attrs: [String: AnyObject]) -> NSAttributedString {
+    public func attributed(_ attrs: [String: AnyObject]) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attrs)
     }
     
     
     
     public var stringByDeletingPathExtension: String{
-        return (self as NSString).stringByDeletingPathExtension
+        return (self as NSString).deletingPathExtension
     }
     
     
-    public init?(json: [NSObject: AnyObject]) {
+    public init?(json: [AnyHashable: Any]) {
         
-        if let data = try? NSJSONSerialization.dataWithJSONObject(json, options: NSJSONWritingOptions()),
-            string = NSString(data: data, encoding: NSUTF8StringEncoding) {
+        if let data = try? JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions()),
+            let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
             self = string as String
         } else {
             return nil
@@ -83,7 +84,7 @@ extension String {
     }
     
     
-    public func hasCharacter(ch: Character) -> Bool {
+    public func hasCharacter(_ ch: Character) -> Bool {
         for s in self.characters {
             if s == ch {return true}
         }
@@ -93,13 +94,13 @@ extension String {
     
     
     
-    public func stringByappendingURLParameter(parameter: String, withValue value: String) -> String {
+    public func stringByappendingURLParameter(_ parameter: String, withValue value: String) -> String {
         return self + (hasCharacter("?") ? "&" : "?") + "\(parameter)=\(value)"
     }
     
     
     
-    public func stringByAppendingURLParameters(paramValueDictionary: [String : AnyObject])-> String{
+    public func stringByAppendingURLParameters(_ paramValueDictionary: [String : AnyObject])-> String{
         var arr = [String]()
         for i in paramValueDictionary {
             arr.append("\(i.0)=\(i.1)")
@@ -108,48 +109,49 @@ extension String {
         
         var input = self
         if  !hasCharacter("?") {
-            input += "?" + arr.removeAtIndex(0)
+            input += "?" + arr.remove(at: 0)
         }
         
-        return arr.reduce(input, combine: {$0 + "&" + $1})
+        return arr.reduce(input, {$0 + "&" + $1})
     }
     
     
     
-    public func formatDate(date: NSDate) -> String {
-        let dtf = NSDateFormatter()
+    public func formatDate(_ date: Date) -> String {
+        let dtf = DateFormatter()
         dtf.dateFormat = self
-        return dtf.stringFromDate(date)
+        return dtf.string(from: date)
     }
     
     
     
-    public func dateWithFormat(format: String) -> NSDate? {
-        let dtf = NSDateFormatter()
+    public func dateWithFormat(_ format: String) -> Date? {
+        let dtf = DateFormatter()
         dtf.dateFormat = format
-        return dtf.dateFromString(self)
+        return dtf.date(from: self)
     }
     
     
     
-    public func format(args: CVarArgType...) -> String {
+    public func format(_ args: CVarArg...) -> String {
         return String(format: self, arguments: args)
     }
     
     
-    
-    public func NSRangeOfString(string: String) -> NSRange? {
-        if let range = rangeOfString(string, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil) {
-            return NSMakeRange(self.startIndex.distanceTo(range.startIndex), range.count)
+    /*
+    public func NSRangeOfString(_ string: String) -> NSRange? {
+        if let range = range(of: string, options: NSString.CompareOptions.caseInsensitive, range: nil, locale: nil) {
+            
+            return NSMakeRange(self.characters.distance(from: self.startIndex, to: range.lowerBound), range.count)
         } else {
             return nil
         }
     }
-    
+    */
     
     
     public var clearedURLString: String {
-        return stringByReplacingOccurrencesOfString("/", withString: "_").stringByReplacingOccurrencesOfString(":", withString: "_").stringByReplacingOccurrencesOfString(".", withString: "_")
+        return replacingOccurrences(of: "/", with: "_").replacingOccurrences(of: ":", with: "_").replacingOccurrences(of: ".", with: "_")
     }
     
     // MARK: Localization
@@ -159,11 +161,11 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
     
-    public func localized(comment comment: String) -> String {
+    public func localized(comment: String) -> String {
         return NSLocalizedString(self, comment: comment)
     }
     
-    public func localizedFormat(arguments: CVarArgType...) -> String {
+    public func localizedFormat(_ arguments: CVarArg...) -> String {
         return String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
     }
     

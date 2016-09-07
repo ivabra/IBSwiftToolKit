@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public class IBSwiftToolKit {
+open class IBSwiftToolKit {
     public struct UIAlertViewController {
         public static let DefaultErrorTitle = "Error";
         public static let DefaultErrorDescription =  "Unknown error";

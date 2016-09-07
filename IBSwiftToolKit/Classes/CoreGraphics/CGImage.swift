@@ -9,12 +9,12 @@
 import Foundation
 
 
-public func CGImageResize(image: CGImage, _ size: CGSize) -> CGImage! {
-    let context  = CGBitmapContextCreate(nil, Int(size.width), Int(size.height),
-                                         CGImageGetBitsPerComponent(image),
-                                         CGImageGetBytesPerRow(image),
-                                         CGImageGetColorSpace(image),
-                                         CGImageGetAlphaInfo(image).rawValue);
-    CGContextDrawImage(context, CGRect(origin: CGPointZero, size: size), image);
-    return CGBitmapContextCreateImage(context);
+public func CGImageResize(_ image: CGImage, _ size: CGSize) -> CGImage! {
+    let context  = CGContext(data: nil, width: Int(size.width), height: Int(size.height),
+                                         bitsPerComponent: image.bitsPerComponent,
+                                         bytesPerRow: image.bytesPerRow,
+                                         space: image.colorSpace!,
+                                         bitmapInfo: image.alphaInfo.rawValue);
+    context?.draw(image, in: CGRect(origin: CGPoint.zero, size: size));
+    return context!.makeImage();
 }

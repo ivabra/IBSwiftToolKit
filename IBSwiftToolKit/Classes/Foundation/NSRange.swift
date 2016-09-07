@@ -9,23 +9,17 @@
 import Foundation.NSRange
 
 extension NSRange {
+    
     public init(location:Int, length:Int) {
         self.location = location
         self.length = length
+        
     }
     
-    public init(_ location:Int, _ length:Int) {
-        self.location = location
-        self.length = length
-    }
     
     public init(range:Range <Int>) {
-        self.location = range.startIndex
-        self.length = range.endIndex - range.startIndex
+        self.location = range.lowerBound
+        self.length = range.upperBound - range.lowerBound
     }
-    
-    public init(_ range:Range <Int>) {
-        self.location = range.startIndex
-        self.length = range.endIndex - range.startIndex
-    }
+     
 }

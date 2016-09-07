@@ -10,6 +10,6 @@ import CoreGraphics
 
 extension CGColor {
     public var UIColor: UIKit.UIColor {
-        return UIKit.UIColor(CGColor: self)
+        return UIKit.UIColor(cgColor: self)
     }
 }

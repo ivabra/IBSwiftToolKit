@@ -8,11 +8,12 @@
 
 
 extension Array {
-    public mutating func withoutItemsAtIndexesInPlace(indexes: [Int]) -> [Element]{
+    public mutating func withoutItemsAtIndexesInPlace(_ indexes: [Int]) -> [Element]{
         let indexSet = Set(indexes)
         var removed = [Element]()
-        self = enumerate().filter {
-            if indexSet.contains($0.index) {
+        self = enumerated().filter {
+            
+            if indexSet.contains($0.offset) {
                 removed.append($0.element)
                 return false
             }
@@ -21,18 +22,18 @@ extension Array {
         return removed
     }
     
-    public mutating func withItemsAtIndexesInPlace(indexes: [Int]){
+    public mutating func withItemsAtIndexesInPlace(_ indexes: [Int]){
         let indexSet = Set(indexes)
-        self = enumerate().filter{indexSet.contains($0.index)}.map {$0.element}
+        self = enumerated().filter{indexSet.contains($0.offset)}.map {$0.element}
     }
     
-    public func arrayWithoutItemsAtIndexes(indexes: [Int]) -> [Element] {
+    public func arrayWithoutItemsAtIndexes(_ indexes: [Int]) -> [Element] {
         let indexSet = Set(indexes)
-        return enumerate().filter{!indexSet.contains($0.index)}.map {$0.element}
+        return enumerated().filter{!indexSet.contains($0.offset)}.map {$0.element}
     }
     
-    public func arrayWithItemsAtIndexes(indexes: [Int]) -> [Element] {
+    public func arrayWithItemsAtIndexes(_ indexes: [Int]) -> [Element] {
         let indexSet = Set(indexes)
-        return enumerate().filter{indexSet.contains($0.index)}.map {$0.element}
+        return enumerated().filter{indexSet.contains($0.offset)}.map {$0.element}
     }
 }

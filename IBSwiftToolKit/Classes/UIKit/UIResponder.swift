@@ -9,14 +9,14 @@
 import UIKit.UIResponder
 
 extension UIResponder {
-    private static var __firstResponder: UIResponder!
+    fileprivate static var __firstResponder: UIResponder!
     public class func currentFirstResponder() -> UIResponder? {
         __firstResponder = nil
-        UIApplication.sharedApplication().sendAction(#selector(__firstResponserAction(_:)), to: nil, from: nil, forEvent: nil)
+        UIApplication.shared.sendAction(#selector(__firstResponserAction(_:)), to: nil, from: nil, for: nil)
         return __firstResponder
     }
     
-    @objc private func __firstResponserAction(sender: AnyObject) {
+    @objc fileprivate func __firstResponserAction(_ sender: AnyObject) {
         UIResponder.__firstResponder = self
     }
 }

@@ -14,11 +14,11 @@ extension NSAttributedString {
         let str = NSMutableAttributedString()
         for s in attributeStrings {
             if let attrString = s as? NSAttributedString {
-                str.appendAttributedString(attrString)
+                str.append(attrString)
             } else if let simpleString = s as? String {
-                str.appendAttributedString(NSAttributedString(string: simpleString))
+                str.append(NSAttributedString(string: simpleString))
             } else {
-                str.appendAttributedString(NSAttributedString(string: "\(s)"))
+                str.append(NSAttributedString(string: "\(s)"))
             }
         }
         self.init(attributedString: str)

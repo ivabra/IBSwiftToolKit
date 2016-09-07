@@ -17,11 +17,11 @@ public struct StoryboardSegueTemplate {
 extension UIViewController {
     
     
-    public func findOutputSeguesWithClassNameContains(className: String) -> [StoryboardSegueTemplate] {
-        if let segues = self.valueForKey("_storyboardSegueTemplates") as? [AnyObject] {
+    public func findOutputSeguesWithClassNameContains(_ className: String) -> [StoryboardSegueTemplate] {
+        if let segues = self.value(forKey: "_storyboardSegueTemplates") as? [AnyObject] {
             let templates = segues
-                .filter{ ($0.valueForKey("_segueClassName") as? String)?.containsString(className) == true}.map { segue -> StoryboardSegueTemplate? in
-                    if let controllerID = segue.valueForKey("_destinationViewControllerIdentifier") as? String, segueClassName = segue.valueForKey("_segueClassName") as? String {
+                .filter{ ($0.value(forKey: "_segueClassName") as? String)?.contains(className) == true}.map { segue -> StoryboardSegueTemplate? in
+                    if let controllerID = segue.value(forKey: "_destinationViewControllerIdentifier") as? String, let segueClassName = segue.value(forKey: "_segueClassName") as? String {
                         return StoryboardSegueTemplate(segueClassName: segueClassName, destinationViewControllerIdentifier: controllerID)
                     } else {
                         return nil
@@ -32,26 +32,26 @@ extension UIViewController {
         return []
     }
     
-    public func presentErrorViewController(error: NSError?, title: String = IBSwiftToolKit.UIAlertViewController.errorTitle, okButton: String = "OK", animated: Bool = true, completion: (()-> Void)? = nil) {
+    public func presentErrorViewController(_ error: NSError?, title: String = IBSwiftToolKit.UIAlertViewController.errorTitle, okButton: String = "OK", animated: Bool = true, completion: (()-> Void)? = nil) {
         
-        if NSThread.mainThread() != NSThread.currentThread() {
-            dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
+        if Thread.main != Thread.current {
+            DispatchQueue.main.async(execute: {[weak self] () -> Void in
                 self?.presentErrorViewController(error, animated: animated, completion: completion)
              })
         }
         
         let alert = UIAlertController(title: title, error: error)
-        alert.addAction(UIAlertAction(title: okButton, style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: okButton, style: .cancel, handler: nil))
         
-        presentViewController(alert, animated: animated, completion: completion)
+        present(alert, animated: animated, completion: completion)
         
     }
     
-    public func addChildViewController(controller: UIViewController, toView view: UIView) {
+    public func addChildViewController(_ controller: UIViewController, toView view: UIView) {
         addChildViewController(controller)
         controller.view.frame = view.bounds
         view.addSubview(controller.view)
-        controller.didMoveToParentViewController(self)
+        controller.didMove(toParentViewController: self)
     }
     
     public func removeFromParentViewControllerCompletely() {
@@ -75,9 +75,9 @@ extension UIViewController {
     ///- Parameter class: Class of desired parent view controller.
     ///- Returns: Nearest parent view controller with specified `class`, or `nil`.
     
-    public func parentViewControllerWithType<T>(`class`: T.Type) -> T? {
+    public func parentViewControllerWithType<T>(_ class: T.Type) -> T? {
         var currentViewController = self
-        while let parent = currentViewController.parentViewController {
+        while let parent = currentViewController.parent {
             if parent is T {
                 return parent as? T
             }

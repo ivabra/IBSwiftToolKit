@@ -9,7 +9,7 @@
 import Foundation
 
 extension UISegmentedControl {
-    public func setLocalizableTitle(localizableTitle: String, forSegmentAtIndex index: Int) {
-        setTitle(NSLocalizedString(localizableTitle, comment: ""), forSegmentAtIndex: index)
+    public func setLocalizableTitle(_ localizableTitle: String, forSegmentAtIndex index: Int) {
+        setTitle(NSLocalizedString(localizableTitle, comment: ""), forSegmentAt: index)
     }
 }

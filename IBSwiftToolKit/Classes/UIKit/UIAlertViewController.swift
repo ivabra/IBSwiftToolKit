@@ -9,15 +9,15 @@
 import Foundation
 
 extension UIAlertController {
-    public class func presentAlertWithTitle(title: String?, andMessage message: String?, andPreferredStyle style: UIAlertControllerStyle, withCancelTitle cancel: String?, andActionTitle action: String?, andActionStyle actionStyle: UIAlertActionStyle, inViewController controller: UIViewController, withActionBlock block: ()->()){
+    public class func presentAlertWithTitle(_ title: String?, andMessage message: String?, andPreferredStyle style: UIAlertControllerStyle, withCancelTitle cancel: String?, andActionTitle action: String?, andActionStyle actionStyle: UIAlertActionStyle, inViewController controller: UIViewController, withActionBlock block: @escaping ()->()){
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-        alert.addAction(UIAlertAction(title: cancel, style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: cancel, style: UIAlertActionStyle.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: action, style: actionStyle, handler: {_ in
             block()
         }))
         
-        controller.presentViewController(alert, animated: true, completion: nil)
+        controller.present(alert, animated: true, completion: nil)
     }
     public convenience init(title: String, error: NSError?, unknownErrorDescription unknown: String = IBSwiftToolKit.UIAlertViewController.DefaultErrorDescription) {
         let desc: String
@@ -27,7 +27,7 @@ extension UIAlertController {
         
         if let error = error { 
             desc = error.userInfo[NSLocalizedDescriptionKey] as? String ?? unknown
-            options = (error.userInfo[NSLocalizedRecoveryOptionsErrorKey] as? Array<String>)?.joinWithSeparator(", ")
+            options = (error.userInfo[NSLocalizedRecoveryOptionsErrorKey] as? Array<String>)?.joined(separator: ", ")
             reason = error.userInfo[NSLocalizedFailureReasonErrorKey] as? String
             suggestions = error.userInfo[NSLocalizedRecoverySuggestionErrorKey] as? String
         } else {
@@ -48,6 +48,6 @@ extension UIAlertController {
             message += "\n\(options)"
         }
         
-        self.init(title: title, message: message, preferredStyle: .Alert)
+        self.init(title: title, message: message, preferredStyle: .alert)
     }
 }

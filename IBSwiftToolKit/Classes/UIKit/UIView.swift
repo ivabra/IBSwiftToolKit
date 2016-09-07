@@ -21,7 +21,7 @@ extension UIView {
     }
     
     @IBInspectable public var borderColor: UIColor? {
-        set { layer.borderColor = newValue?.CGColor  }
+        set { layer.borderColor = newValue?.cgColor  }
         get { return layer.borderColor?.UIColor }
     }
     
@@ -43,7 +43,7 @@ extension UIView {
     }
  
     @IBInspectable public var shadowColor: UIColor? {
-        set { layer.shadowColor = newValue?.CGColor }
+        set { layer.shadowColor = newValue?.cgColor }
         get { return layer.shadowColor?.UIColor }
     }
  
@@ -52,13 +52,13 @@ extension UIView {
         get { return clipsToBounds }
     }
     
-    public func translate(x x: CGFloat, y: CGFloat) {
-        transform = CGAffineTransformTranslate(transform, x, y)
+    public func translate(x: CGFloat, y: CGFloat) {
+        transform = transform.translatedBy(x: x, y: y)
     }
     
     
-    public func scale(x x: CGFloat, y: CGFloat) {
-        transform = CGAffineTransformScale(transform, x, y)
+    public func scale(x: CGFloat, y: CGFloat) {
+        transform = transform.scaledBy(x: x, y: y)
     }
     
 }

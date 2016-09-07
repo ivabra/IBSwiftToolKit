@@ -13,17 +13,17 @@ import CoreGraphics
 
 extension CGRect {
     
-    public var topLeft:        CGPoint { return CGPointMake(minX, minY)}
-    public var topCenter:      CGPoint { return CGPointMake(midX, minY)}
-    public var topRight:       CGPoint { return CGPointMake(maxX, minY)}
+    public var topLeft:        CGPoint { return CGPoint(x: minX, y: minY)}
+    public var topCenter:      CGPoint { return CGPoint(x: midX, y: minY)}
+    public var topRight:       CGPoint { return CGPoint(x: maxX, y: minY)}
     
-    public var centerLeft:     CGPoint { return CGPointMake(minX, midY)}
-    public var center:         CGPoint { return CGPointMake(midX, midY)}
-    public var cetnerRight:    CGPoint { return CGPointMake(maxX, midY)}
+    public var centerLeft:     CGPoint { return CGPoint(x: minX, y: midY)}
+    public var center:         CGPoint { return CGPoint(x: midX, y: midY)}
+    public var cetnerRight:    CGPoint { return CGPoint(x: maxX, y: midY)}
     
-    public var bottomLeft:     CGPoint { return CGPointMake(minX, maxY)}
-    public var bottomCenter:   CGPoint { return CGPointMake(midX, maxY)}
-    public var bottomRight:    CGPoint { return CGPointMake(maxX, maxY)}
+    public var bottomLeft:     CGPoint { return CGPoint(x: minX, y: maxY)}
+    public var bottomCenter:   CGPoint { return CGPoint(x: midX, y: maxY)}
+    public var bottomRight:    CGPoint { return CGPoint(x: maxX, y: maxY)}
     
 }
 

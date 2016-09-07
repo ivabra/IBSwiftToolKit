@@ -12,41 +12,41 @@ extension UIButton {
     
     public var titleForNormalState: String? {
         get {
-            return titleForState(.Normal)
+            return title(for: UIControlState())
         }
         
         set {
-            setTitle(newValue, forState: .Normal)
+            setTitle(newValue, for: UIControlState())
         }
     }
     
    public  var titleForDisabledState: String? {
         get {
-            return titleForState(.Disabled)
+            return title(for: .disabled)
         }
         
         set {
-            setTitle(newValue, forState: .Disabled)
+            setTitle(newValue, for: .disabled)
         }
     }
     
     public var titleForSelectedState: String? {
         get {
-            return titleForState(.Selected)
+            return title(for: .selected)
         }
         
         set {
-            setTitle(newValue, forState: .Selected)
+            setTitle(newValue, for: .selected)
         }
     }
     
     public var titleForHighlightedState: String? {
         get {
-            return titleForState(.Highlighted)
+            return title(for: .highlighted)
         }
         
         set {
-            setTitle(newValue, forState: .Highlighted)
+            setTitle(newValue, for: .highlighted)
         }
     }
     
@@ -58,7 +58,7 @@ extension UIButton {
             return nil
         }
         set {
-            self.setTitle(newValue?.localized, forState: .Normal)
+            self.setTitle(newValue?.localized, for: UIControlState())
         }
     }
     
@@ -68,7 +68,7 @@ extension UIButton {
             return nil
         }
         set {
-            self.setTitle(newValue?.localized, forState: .Disabled)
+            self.setTitle(newValue?.localized, for: .disabled)
         }
     }
     
@@ -78,7 +78,7 @@ extension UIButton {
             return nil
         }
         set {
-            self.setTitle(newValue?.localized, forState: .Selected)
+            self.setTitle(newValue?.localized, for: .selected)
         }
     }
     
@@ -88,7 +88,7 @@ extension UIButton {
             return nil
         }
         set {
-            self.setTitle(newValue?.localized, forState: .Highlighted)
+            self.setTitle(newValue?.localized, for: .highlighted)
         }
     }
     

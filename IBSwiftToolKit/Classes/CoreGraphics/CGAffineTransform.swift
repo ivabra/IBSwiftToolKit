@@ -11,42 +11,42 @@ import Foundation
 extension CGAffineTransform {
     
     
-    public func scaled(x x: CGFloat, y: CGFloat) -> CGAffineTransform {
-        return CGAffineTransformScale(self, x, y)
+    public func scaled(x: CGFloat, y: CGFloat) -> CGAffineTransform {
+        return self.scaledBy(x: x, y: y)
     }
     
-    public func translated(x x: CGFloat, y: CGFloat) -> CGAffineTransform {
-        return CGAffineTransformTranslate(self, x, y)
+    public func translated(x: CGFloat, y: CGFloat) -> CGAffineTransform {
+        return self.translatedBy(x: x, y: y)
     }
     
-    public func rotated(angle: CGFloat) -> CGAffineTransform {
-        return CGAffineTransformRotate(self, angle)
+    public func rotated(_ angle: CGFloat) -> CGAffineTransform {
+        return self.rotated(by: angle)
     }
     
     public func inverted() -> CGAffineTransform {
-        return CGAffineTransformInvert(self)
+        return self.inverted()
     }
     
     // MARK: in place transforms
     
-    public  mutating func translate(x x: CGFloat, y: CGFloat) {
-        self = CGAffineTransformTranslate(self, x, y)
+    public  mutating func translate(x: CGFloat, y: CGFloat) {
+        self = self.translatedBy(x: x, y: y)
     }
     
-    public mutating func scale(x x: CGFloat, y: CGFloat) {
-        self = CGAffineTransformScale(self, x, y)
+    public mutating func scale(x: CGFloat, y: CGFloat) {
+        self = self.scaledBy(x: x, y: y)
     }
     
-    public mutating func rotate(angle: CGFloat) {
-        self = CGAffineTransformRotate(self, angle)
+    public mutating func rotate(_ angle: CGFloat) {
+        self = self.rotated(by: angle)
     }
     
     public mutating func invert() {
-        self = CGAffineTransformInvert(self)
+        self = self.inverted()
     }
     
     public mutating func identity() {
-        self = CGAffineTransformIdentity
+        self = CGAffineTransform.identity
     }
     
     
