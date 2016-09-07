@@ -13,34 +13,7 @@ extension String {
         return UIImage(named: self)
     }
     
-    /*
-    public func createViewController<T: UIViewController>(_ storyboard: UIStoryboard, _ type: T.Type) -> T? {
-        return storyboard.instantiateViewController(withIdentifier: self) as? T
-    }
-    
-    
-    public func like(_ regex: String) -> Bool {
-        if let regexp = try? NSRegularExpression(pattern: regex, options: .caseInsensitive) {
-            return regexp.firstMatch(in: self, options: [], range: NSMakeRange(0, self.characters.count)) != nil
-        }
-        return false
-    }
-    
-    
-    public func firstMatchingRegexpPattern(_ pattern: String) -> String? {
-        if let expr = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive),
-            let first = expr.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, self.characters.count))
-        {
-            let r = first.range
-            let range = characters.index(startIndex, offsetBy: r.location)...characters.index(startIndex, offsetBy: r.location + r.length)
-            return substring(with: range)
-        } else {
-            return nil
-        }
-    }
-    
-    */
-    
+        
     public func allCharactersInSet(_ set: CharacterSet) -> Bool {
         for ch in self.utf16 {
             if !set.contains(UnicodeScalar(ch)!){ return false }
@@ -138,16 +111,6 @@ extension String {
     }
     
     
-    /*
-    public func NSRangeOfString(_ string: String) -> NSRange? {
-        if let range = range(of: string, options: NSString.CompareOptions.caseInsensitive, range: nil, locale: nil) {
-            
-            return NSMakeRange(self.characters.distance(from: self.startIndex, to: range.lowerBound), range.count)
-        } else {
-            return nil
-        }
-    }
-    */
     
     
     public var clearedURLString: String {

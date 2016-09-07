@@ -23,7 +23,6 @@
 		9F978DE31C95CF1D0056A87C /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE21C95CF1D0056A87C /* CGAffineTransform.swift */; };
 		9F978DE71C95CF670056A87C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE61C95CF670056A87C /* String.swift */; };
 		9F978DE91C95DBE20056A87C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DE81C95DBE20056A87C /* NSAttributedString.swift */; };
-		9F978DEB1C95DC5F0056A87C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEA1C95DC5F0056A87C /* Int.swift */; };
 		9F978DED1C95DD360056A87C /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEC1C95DD360056A87C /* UIDevice.swift */; };
 		9F978DF01C95DD830056A87C /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DEF1C95DD830056A87C /* Init.swift */; };
 		9F978DF31C95DE230056A87C /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978DF21C95DE230056A87C /* UISearchBar.swift */; };
@@ -55,7 +54,6 @@
 		9F978DE21C95CF1D0056A87C /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		9F978DE61C95CF670056A87C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9F978DE81C95DBE20056A87C /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
-		9F978DEA1C95DC5F0056A87C /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		9F978DEC1C95DD360056A87C /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		9F978DEF1C95DD830056A87C /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		9F978DF21C95DE230056A87C /* UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			children = (
 				9F978DD41C95CAFE0056A87C /* Array.swift */,
 				9F978DE61C95CF670056A87C /* String.swift */,
-				9F978DEA1C95DC5F0056A87C /* Int.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -287,7 +284,6 @@
 				9F978DCA1C95C9D80056A87C /* UIButton.swift in Sources */,
 				9F978DD21C95CAB00056A87C /* CGImage.swift in Sources */,
 				9F978DE31C95CF1D0056A87C /* CGAffineTransform.swift in Sources */,
-				9F978DEB1C95DC5F0056A87C /* Int.swift in Sources */,
 				9F978DCF1C95CA860056A87C /* CGPoint.swift in Sources */,
 				9F978DCD1C95CA490056A87C /* CGRect.swift in Sources */,
 				9F978DF71C95DE8F0056A87C /* UISegmentControl.swift in Sources */,

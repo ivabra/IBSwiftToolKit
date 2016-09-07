@@ -10,13 +10,6 @@ import Foundation.NSRange
 
 extension NSRange {
     
-    public init(location:Int, length:Int) {
-        self.location = location
-        self.length = length
-        
-    }
-    
-    
     public init(range:Range <Int>) {
         self.location = range.lowerBound
         self.length = range.upperBound - range.lowerBound
