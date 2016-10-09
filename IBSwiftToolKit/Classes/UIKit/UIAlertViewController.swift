@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIAlertController {
     public class func presentAlertWithTitle(_ title: String?, andMessage message: String?, andPreferredStyle style: UIAlertControllerStyle, withCancelTitle cancel: String?, andActionTitle action: String?, andActionStyle actionStyle: UIAlertActionStyle, inViewController controller: UIViewController, withActionBlock block: @escaping ()->()){

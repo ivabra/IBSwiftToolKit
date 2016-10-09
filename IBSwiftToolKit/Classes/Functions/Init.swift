@@ -8,6 +8,7 @@
 
 import Foundation
 
+@discardableResult
 public func Init<T>(_ object: T!, _ setup: (T)->Void) -> T! {
     guard let object = object else  { return nil }
     setup(object)

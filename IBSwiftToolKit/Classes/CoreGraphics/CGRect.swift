@@ -28,6 +28,10 @@ extension CGRect {
 }
 
 
+extension CGSize {
+   public static let infinity: CGSize = .init(width: CGFloat.infinity, height: CGFloat.infinity)
+}
+
 
 
 
