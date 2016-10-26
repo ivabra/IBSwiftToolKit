@@ -19,7 +19,7 @@ extension CGRect {
     
     public var centerLeft:     CGPoint { return CGPoint(x: minX, y: midY)}
     public var center:         CGPoint { return CGPoint(x: midX, y: midY)}
-    public var cetnerRight:    CGPoint { return CGPoint(x: maxX, y: midY)}
+    public var centerRight:    CGPoint { return CGPoint(x: maxX, y: midY)}
     
     public var bottomLeft:     CGPoint { return CGPoint(x: minX, y: maxY)}
     public var bottomCenter:   CGPoint { return CGPoint(x: midX, y: maxY)}
