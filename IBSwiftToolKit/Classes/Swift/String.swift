@@ -34,7 +34,7 @@ extension String {
     
     
     
-    public func attributed(_ attrs: [String: AnyObject]) -> NSAttributedString {
+    public func attributed(_ attrs: [String: Any]) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attrs)
     }
     
