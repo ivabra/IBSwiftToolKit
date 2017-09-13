@@ -31,11 +31,19 @@ extension String {
         return false
     }
     
-    
-    
-    
-    public func attributed(_ attrs: [String: Any]) -> NSAttributedString {
+  
+    public func attributed(_ attrs: [NSAttributedStringKey: Any]) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attrs)
+    }
+  
+  
+  
+    public func attributed(_ attrs: [String: Any]) -> NSAttributedString {
+      var _attrs = [NSAttributedStringKey : Any]()
+      for (k,v) in attrs {
+        _attrs[NSAttributedStringKey(k)] = v
+      }
+      return NSAttributedString(string: self, attributes: _attrs)
     }
     
     
