@@ -1,20 +1,13 @@
-//
-//  CGImage.swift
-//  IBSwiftToolKit
-//
-//  Created by Ivan Brazhnikov on 13.03.16.
-//  Copyright © 2016 Ivan Brazhnikov. All rights reserved.
-//
+import CoreGraphics
 
-import Foundation
-
-
-public func CGImageResize(_ image: CGImage, _ size: CGSize) -> CGImage! {
-    let context  = CGContext(data: nil, width: Int(size.width), height: Int(size.height),
-                                         bitsPerComponent: image.bitsPerComponent,
-                                         bytesPerRow: image.bytesPerRow,
-                                         space: image.colorSpace!,
-                                         bitmapInfo: image.alphaInfo.rawValue);
-    context?.draw(image, in: CGRect(origin: CGPoint.zero, size: size));
-    return context!.makeImage();
+extension CGImage {
+  func resize(to size: CGSize) -> CGImage? {
+    guard let context  = CGContext(data: nil, width: Int(size.width), height: Int(size.height),
+                                   bitsPerComponent: bitsPerComponent,
+                                   bytesPerRow: bytesPerRow,
+                                   space: colorSpace ?? CGColorSpaceCreateDeviceRGB(),
+                                   bitmapInfo: alphaInfo.rawValue) else { return nil }
+    context.draw(self, in: CGRect(origin: CGPoint.zero, size: size))
+    return context.makeImage()
+  }
 }

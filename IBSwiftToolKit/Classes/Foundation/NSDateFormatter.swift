@@ -1,18 +1,10 @@
-//
-//  NSDateFormatter.swift
-//  IBSwiftToolKit
-//
-//  Created by Ivan Brazhnikov on 13.03.16.
-//  Copyright © 2016 Ivan Brazhnikov. All rights reserved.
-//
-
 import Foundation
 
 extension DateFormatter {
-    
-    public convenience init(format: String){
-        self.init()
-        self.dateFormat = format
-    }
-    
+
+  public convenience init(format: String) {
+    self.init()
+    self.dateFormat = format
+  }
+
 }

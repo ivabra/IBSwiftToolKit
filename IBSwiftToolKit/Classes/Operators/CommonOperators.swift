@@ -1,27 +1,20 @@
-//
-//  CommonOperators.swift
-//  IBSwiftToolKit
-//
-//  Created by Ivan Brazhnikov on 14.03.16.
-//  Copyright © 2016 Ivan Brazhnikov. All rights reserved.
-//
-
 infix operator =!
 
 public func =! <T>(left: inout T, right: Any) {
-    left = right as! T
+  guard let castedRight = right as? T else {
+    fatalError("Can't cast \(right) to type \(T.self)")
+  }
+  left = castedRight
 }
-
 
 infix operator =?
 
 public func =? <T>(left: inout T, right: Any?) {
-    if let right = right as? T {
-        left = right
-    }
+  if let right = right as? T {
+    left = right
+  }
 }
 
 public func =? <T>(left: inout T!, right: Any?) {
-    left = right as? T
+  left = right as? T
 }
-

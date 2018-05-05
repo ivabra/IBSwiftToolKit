@@ -1,39 +1,31 @@
-//
-//  CGPoint.swift
-//  IBSwiftToolKit
-//
-//  Created by Ivan Brazhnikov on 13.03.16.
-//  Copyright © 2016 Ivan Brazhnikov. All rights reserved.
-//
-
 import Foundation
 
+extension CGPoint {
+  public static let anchorPointCenter         = CGPoint(x: 0.5, y: 0.5)
+  public static let anchorPointCenterLeft     = CGPoint(x: 0, y: 0.5)
+  public static let anchorPointCenterRight    = CGPoint(x: 1, y: 0.5)
 
-public let CGAnchorPointCenter         = CGPoint(x: 0.5, y: 0.5)
-public let CGAnchorPointCenterLeft     = CGPoint(x: 0, y: 0.5)
-public let CGAnchorPointCenterRight    = CGPoint(x: 1, y: 0.5)
+  public static let anchorPointBottomCenter   = CGPoint(x: 0.5, y: 1)
+  public static let anchorPointBottomLeft     = CGPoint(x: 0.5, y: 1)
+  public static let anchorPointBottomRight    = CGPoint(x: 1, y: 1)
 
-public let CGAnchorPointBottomCenter   = CGPoint(x: 0.5, y: 1)
-public let CGAnchorPointBottomLeft     = CGPoint(x: 0.5, y: 1)
-public let CGAnchorPointBottomRight    = CGPoint(x: 1, y: 1)
-
-public let CGAnchorPointTopLeft        = CGPoint(x: 0, y: 0)
-public let CGAnchorPointTopRight       = CGPoint(x: 0.5, y: 0.5)
-public let CGAnchorPointTopCenter      = CGPoint(x: 0.5, y: 0)
-
+  public static let anchorPointTopLeft        = CGPoint(x: 0, y: 0)
+  public static let anchorPointTopRight       = CGPoint(x: 0.5, y: 0.5)
+  public static let anchorPointTopCenter      = CGPoint(x: 0.5, y: 0)
+}
 
 public func + (left: CGPoint, right: CGPoint) -> CGPoint {
-    return CGPoint(x: left.x + right.x, y: left.y + right.y)
+  return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
 
 public func - (left: CGPoint, right: CGPoint) -> CGPoint {
-    return CGPoint(x: left.x - right.x, y: left.y - right.y)
+  return CGPoint(x: left.x - right.x, y: left.y - right.y)
 }
 
 public func * (left: CGPoint, right: CGPoint) -> CGPoint {
-    return CGPoint(x: left.x * right.x, y: left.y * right.y)
+  return CGPoint(x: left.x * right.x, y: left.y * right.y)
 }
 
 public func / (left: CGPoint, right: CGPoint) -> CGPoint {
-    return CGPoint(x: left.x / right.x, y: left.y / right.y)
+  return CGPoint(x: left.x / right.x, y: left.y / right.y)
 }
