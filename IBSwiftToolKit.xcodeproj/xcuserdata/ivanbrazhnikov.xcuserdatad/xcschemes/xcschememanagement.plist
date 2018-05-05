@@ -18,10 +18,10 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>IBSwiftToolKit.xcscheme</key>
+		<key>IBSwiftToolKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
