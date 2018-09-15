@@ -13,11 +13,6 @@ extension CGAffineTransform {
   public func rotated(_ angle: CGFloat) -> CGAffineTransform {
     return self.rotated(by: angle)
   }
-
-  public func inverted() -> CGAffineTransform {
-    return self.inverted()
-  }
-
   // MARK: in place transforms
 
   public  mutating func translate(x: CGFloat, y: CGFloat) {

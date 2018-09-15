@@ -3,15 +3,15 @@ import UIKit
 extension UIViewController {
 
 public func addChildViewController(_ controller: UIViewController, toView view: UIView) {
-    addChildViewController(controller)
+    addChild(controller)
     controller.view.frame = view.bounds
     view.addSubview(controller.view)
-    controller.didMove(toParentViewController: self)
+    controller.didMove(toParent: self)
   }
 
   public func removeFromParentViewControllerCompletely() {
     view.removeFromSuperview()
-    removeFromParentViewController()
+    removeFromParent()
   }
 
   /// Find the nearest parent view Controller with specified `class`.

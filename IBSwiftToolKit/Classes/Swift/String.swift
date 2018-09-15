@@ -16,14 +16,14 @@ extension String {
     return false
   }
 
-  public func attributed(_ attrs: [NSAttributedStringKey: Any]) -> NSAttributedString {
+  public func attributed(_ attrs: [NSAttributedString.Key: Any]) -> NSAttributedString {
     return NSAttributedString(string: self, attributes: attrs)
   }
 
   public func attributed(_ attrs: [String: Any]) -> NSAttributedString {
-    var resultAttributes = [NSAttributedStringKey: Any]()
+    var resultAttributes = [NSAttributedString.Key: Any]()
     for (key, value) in attrs {
-      resultAttributes[NSAttributedStringKey(key)] = value
+      resultAttributes[NSAttributedString.Key(key)] = value
     }
     return NSAttributedString(string: self, attributes: resultAttributes)
   }
