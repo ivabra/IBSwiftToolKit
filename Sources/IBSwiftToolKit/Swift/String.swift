@@ -43,7 +43,7 @@ extension String {
   }
 
   public func hasCharacter(_ ch: Character) -> Bool {
-    return index(of: ch) != nil
+    return firstIndex(of: ch) != nil
   }
 
   public func stringByappendingURLParameter(_ parameter: String, withValue value: String) -> String {
