@@ -1,3 +1,5 @@
+import Foundation
+
 public protocol StoryboardSegueTemplate {
   var segueClassName: String? { get }
   var destinationViewControllerIdentifier: String? { get }
