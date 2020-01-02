@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 extension CGPoint {
   public static let anchorPointCenter         = CGPoint(x: 0.5, y: 0.5)
