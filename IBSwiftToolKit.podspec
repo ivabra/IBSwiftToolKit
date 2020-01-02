@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IBSwiftToolKit"
-  s.version      = "0.0.8"
+  s.version      = "1.2.0"
   s.summary      = "Here is my own toolbox written on Swift"
 
   s.description  = <<-DESC 
@@ -24,19 +24,14 @@ Pod::Spec.new do |s|
 
   s.author       = { "Ivan Brazhnikov" => "samsungpc239@gmail.com" }
 
-  s.platform     = :ios, "8.0"
-
-  #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
-
+  s.ios.deployment_target = "5.0"
+  s.osx.deployment_target = "10.7"
+  s.watchos.deployment_target = "2.0"
+  s.tvos.deployment_target = "9.0"
 
   s.source       = { :git => "https://github.com/ivabra/IBSwiftToolKit.git", :tag => "v#{s.version}" }
 
-  s.source_files  = "IBSwiftToolKit/Classes", "IBSwiftToolKit/Classes/**/*.{h,m,swift}"
-  s.exclude_files = "IBSwiftToolKit/Classes/Exclude"
+  s.source_files  = "Sources/IBSwiftToolKit", "Sources/IBSwiftToolKit/**/*.{h,m,swift}" 
 
 
 
